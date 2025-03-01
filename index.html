@@ -1,122 +1,180 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
 
+
+<html>
+
+<head>
+<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://shebudriftaiter.net/tag.min.js',8821177,document.body||document.documentElement)</script>
+<title> | Proximity-Team</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="shortcut icon" type="image/x-icon" href="https://maxplay-tv.fun/prox.jpg">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/plyr@3.6.2/dist/plyr.css" />
+<script src="https://cdn.jsdelivr.net/npm/plyr@3.6.12/dist/plyr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.1.4/dist/hls.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <style>
-  html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
+html {
+  font-family: Poppins;
+  background: #000;
+  margin: 0;
+  padding: 0
+}
 
-  .player-container {
-    width: 100%;
-    height: 50%;
-  }
+.loading {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        z-index: 9999;
+    }
+    
+    .loading-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        line-height: 100px;
+    }
+    
+    .loading-text span {
+        display: inline-block;
+        margin: 0 5px;
+        color: #FF0000;
+        font-family: 'Quattrocento Sans', sans-serif;
+    }
+    
+    .loading-text span:nth-child(1) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(2) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.2s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(3) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.4s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(4) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.6s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(5) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 0.8s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(6) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1s infinite linear alternate;
+    }
+    
+    .loading-text span:nth-child(7) {
+        filter: blur(0px);
+        animation: blur-text 1.5s 1.2s infinite linear alternate;
+    }
+    
+    @keyframes blur-text {
+        0% {
+            filter: blur(0px);
+        }
+        100% {
+            filter: blur(4px);
+        }
+    }
 
-  video {
-    object-fit: contain;
-  }
+    .plyr__video-wrapper::before {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10;
+        content: '';
+        height: 100px;
+        width: 115px;
+        background: url('') no-repeat;
+        background-size: 75px auto, auto;
+    }
 
-  .overlay {
-    position: absolute;
-    top: 20px;
-    left: 10px;
-    width: 150px;
-    height: 20px;
-    z-index: 999;
-    pointer-events: none;
-  }
+    .plyr__video-wrapper::after {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 10;
+        content: '';
+        height: 115px;
+        width: 115px;
+        background: url('https://maxplay-tv.fun/prox.jpg') no-repeat;
+        background-size: 75px auto, auto;
+    }
 
-  /* Modal Styles */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-  .modal-content {
-    background-color: white;
-    margin: 15% auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .modal-buttons {
-    margin-top: 20px;
-  }
-
-  .join-btn {
-    background-color: blue;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-right: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-
-  .close-btn {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
 </style>
 
-<!-- Modal HTML -->
-<div id="myModal" class="modal">
-  <div class="modal-content">
-    <h2>Join Our Telegram Channel</h2>
-    <p>Stay updated with the latest streams and news.</p>
-    <div class="modal-buttons">
-      <button class="join-btn" onclick="window.location.href='https://t.me/cric_stream/'">JOIN NOW</button>
-      <button class="close-btn" onclick="closeModal()">Close</button>
-    </div>
-  </div>
+</head>
+<body>
+  <div id="loading" class="loading">
+<div class="loading-text">
+    <span class="loading-text-words">M</span>
+    <span class="loading-text-words">O</span>
+    <span class="loading-text-words">M</span>
+    <span class="loading-text-words">I</span>
+    <span class="loading-text-words">N</span>
+    <span class="loading-text-words">-</span>
+    <span class="loading-text-words">R</span>
+    <span class="loading-text-words">O</span>
+    <span class="loading-text-words">C</span>
+    <span class="loading-text-words">K</span>
+ <span class="loading-text-words">S</span>
 </div>
-
-<div id="player" class="player-container">
-  <img class="overlay" src="#" alt="Overlay">
 </div>
-
+<video autoplay controls crossorigin poster="https://maxplay-tv.fun/prox.jpg" playsinline>
+<source type="application/vnd.apple.mpegurl" src="master.m3u8/?key=proximity-Tv&c=starhindi"></video>
+</body>
 <script>
-  // Initialize player
-  var player = new Clappr.Player({
-    source: './master.m3u8?key=WASITV&c=starhindi',
-    maxBufferLength: 30,
-    autoPlay: true,
-    poster: 'https://i.postimg.cc/j5qhT1g2/Picsart-25-02-28-14-11-01-917.jpg',
-    parentId: '#player',
-    width: '100%',
-    height: '100%',
-    mute: true,
-    hideVolumeBar: true,
-    autoPlayVisible: 'partial',
-    watermark: '#',
-    position: 'bottom-right',
-    watermarkLink: 'https://t.me/cric_stream/'
-  });
-
-  // Show modal after 5 seconds
-  setTimeout(function() {
-    document.getElementById("myModal").style.display = "block";
-  }, 5000);
-
-  // Close modal function
-  function closeModal() {
-    document.getElementById("myModal").style.display = "none";
-  }
+setTimeout(videovisible, 4000)
+function videovisible() {
+    document.getElementById('loading').style.display = 'none';
+    // alert('Join our Telegram Group to get All Updates @t.me/live_cricket_24')
+    
+}
+document.addEventListener("DOMContentLoaded", () => {
+    const e = document.querySelector("video"),
+        n = e.getElementsByTagName("source")[0].src,
+        o = {};
+    if (Hls.isSupported()) {
+        var config = {
+            maxMaxBufferLength: 100,
+        };
+        const t = new Hls(config);
+        t.loadSource(n), t.on(Hls.Events.MANIFEST_PARSED, function(n, l) {
+            const s = t.levels.map(e => e.height);
+            o.quality = {
+                default: s[0],
+                options: s,
+                forced: !0,
+                onChange: e => (function(e) {
+                    window.hls.levels.forEach((n, o) => {
+                        n.height === e && (window.hls.currentLevel = o)
+                    })
+                })(e)
+            };
+            new Plyr(e, o)
+        }), t.attachMedia(e), window.hls = t
+    } else {
+        new Plyr(e, o)
+    }
+});
 </script>
+</body>
+</html>
