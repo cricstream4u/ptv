@@ -1,102 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Sports Hindi Live Streaming</title>
-    <meta name="description" content="Watch Star Sports Hindi Live Streaming on our website CricHD free live cricket streaming site.">
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Star Sports Hindi Live Streaming - #CricHD" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://cdnjs.procdncache.com/bannerlogo.jpg" />
-    <meta property="og:site_name" content="crichd player" />
-    <meta name="Revisit-after" content="1 Day">
-    <link rel="shortcut icon" href="" />
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" as="style">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" media="all">
-    <link rel="preload" href="/fonts/awsfonts.css?x24533" as="style">
-    <link rel="stylesheet" href="/fonts/awsfonts.css?x24533">
-    <link rel="preload" as="image" href="https://cdnjs.procdncache.com/logo/logo.png">
-  <script>var isDesktop={Windows:function(){return navigator.platform.match("Win32|Win16|Win64|WinCE|Windows")},Mac:function(){return navigator.platform.match("MacIntel|Macintosh|MacPPC|Mac68K")},any:function(){return(isDesktop.Windows()||isDesktop.Mac())}};if(isDesktop.any()){window.location="//crichd-player.top/star-sports-hindi-live-streaming-hd-39"}</script>
-<style>.navbar-brand {background: url(https://cdnjs.procdncache.com/logo/logo.png) 0 0 / 110px 30px no-repeat;margin-top: 0;margin-left: 10px;width: 110px;float: left;height: 30px;</style>
-<script>window.addEventListener("beforeunload",function(e){isSameDomain(window.location.href,e.target.href)||confirm("You are leaving this page! Are you sure?")||(alert("Redirect cancelled!"),e.preventDefault())});let currentUrl=window.location.href;setInterval(function(){window.location.href===currentUrl||isSameDomain(currentUrl,window.location.href)||(confirm("You are leaving this page! Are you sure?")?currentUrl=window.location.href:(alert("Redirect cancelled!"),window.location.href=currentUrl))},100),window.onhashchange=function(){isSameDomain(window.location.href,window.location.href)||confirm("You are leaving this page! Are you sure?")||(alert("Redirect cancelled!"),window.location.hash="")};var originalLocation=window.location;Object.defineProperty(window,"location",{get:function(){return originalLocation},set:function(e){isSameDomain(window.location.href,e)?originalLocation.href=e:confirm("You are leaving this page! Are you sure?")?originalLocation.href=e:alert("Redirect cancelled!")}});var originalOpen=window.open;window.open=function(e){isSameDomain(window.location.href,e)?originalOpen(e):confirm("You are leaving this page! Are you sure?")?originalOpen(e):alert("Redirect cancelled!")};var originalReplace=window.location.replace;window.location.replace=function(e){isSameDomain(window.location.href,e)?originalReplace(e):confirm("You are leaving this page! Are you sure?")?originalReplace(e):alert("Redirect cancelled!")};var originalAssign=window.location.assign;function isSameDomain(e,i){var n=getDomain(e),a=getDomain(i);return n===a}function getDomain(e){return e.split("://").pop().split("/")[0]}window.location.assign=function(e){isSameDomain(window.location.href,e)?originalAssign(e):confirm("You are leaving this page! Are you sure?")?originalAssign(e):alert("Redirect cancelled!")};
-</script>
+    <title>DRM Live Video Player</title>
+    <link rel="shortcut icon" href="https://drmlive.in/Player.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #1f1f1f;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            width: 95%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        form {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .input-group {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background-color: #333;
+            border-radius: 8px;
+            padding: 0 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .input-group i {
+            color: #ccc;
+            font-size: 1.2rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: transparent;
+            color: #fff;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 15px;
+            background: linear-gradient(135deg, #4CAF50, #81C784);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+        }
+
+        #player {
+            width: 100%;
+            max-width: 900px;
+            margin: 20px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+            background: #000;
+            height: 400px;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="flex-grow-1">
-<div class="container-fluid">
-<div class=row>
-<div class="col-xxl-3 col-xl-3 col-lg-4 col-md-5 col-sm-12 col-xs-12 nopadding mt-2">
-</div>
+    <div class="container">
+        <h1>DRM Live Video Player</h1>
 
-<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-7 col-sm-12 col-xs-12 nopadding border rounded mt-2">
-<center>
+        <div id="player"></div>
 
-
-</center>
-<script>document.getElementsByTagName("iframe")[0].className = "fullScreen";</script>
-<style>.fullScreen {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-</style>
-
-<iframe src="https://cdn.crichdplays.ru/embed2.php?id=starsp3&v=o" autoplay="yes" autoplay=yes width="100%" height="315" frameborder="0" allowfullscreen="true" scrolling="no" allow="autoplay; fullscreen; picture-in-picture" webkitallowfullscreen="true" mozallowfullscreen="true" allowautoplay="true" allow="fullscreen" marginheight="0" marginwidth="0" mozallowfullscreen allowfullscreen webkitallowfullscreen></iframe>
-<p style="paddning:5px;"></p>
-
-
-</div>
-
-
-
-  </div>
-</div>
-</div>
-    <!-- Footer 
-    <footer class="footer bg-dark mt-2">
-        <div class="container">
-            <div class="row text-white text-center">
-Disclaimer: None of the videos are hosted by this site. Streams hosted on external sites like Youtube and embedded here. This site is not responsible for the legality of the content. For legal issues, please contact appropriate media file owners/hosters.
+        <form id="videoForm" onsubmit="playVideo(event);">
+            <div class="input-group">
+                <i class="fas fa-link"></i>
+                <input type="text" id="link" name="link" placeholder="Enter MPD or HLS link">
             </div>
-            <div class="text-center mt-4 text-white">
-                <p>&copy; 2025 CricHD. All rights reserved.</p>
-            </div>
-        </div>
 
 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js'></script>
-<script type="text/javascript" src="https://cssjsimg2.procdncache.com/files/shareme.js" async="async"></script>
-<script>
-        document.addEventListener("DOMContentLoaded", function() {
-            history.pushState(null, null, location.href);
-            window.onpopstate = function () {
-                history.go(1);
-                window.location.href = 'https://linkonclick.com/jump/next.php?r=7860178';
+            <button type="submit">Play Video</button>
+        </form>
+    </div>
+
+    <script src="https://ssl.p.jwpcdn.com/player/v/8.25.1/jwplayer.js"></script>
+    <script>
+        jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
+
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            return {
+                link: params.get('link') || '',
+                clearKeyPair: params.get('clearKeyPair') || '',
+                widevineLicenseUrl: params.get('widevineLicenseUrl') || '',
+                clearKeyUrl: params.get('clearKeyUrl') || ''
             };
-        });
-    </script>
-<script type="text/javascript">
-if ( window.self !== window.top ) {
-    window.top.location.href=window.location.href;
-}
-</script>
- <!-- Histats.com  START  (aync)
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,3744868,4,0,0,0,00010000']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-hs.src = ('//s10.histats.com/js15_as.js');
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();</script>
-<img  src="//sstatic1.histats.com/0.gif?3744868&101" alt="free hit counter" border="0" style="display:none;"></a>
-<!-- Histats.com  END  -->
+        }
 
-    </footer>
+        function populateForm() {
+            const { link, clearKeyPair, widevineLicenseUrl, clearKeyUrl } = getUrlParams();
+            document.getElementById('link').value = link;
+            document.getElementById('clearKeyPair').value = clearKeyPair;
+            document.getElementById('widevineLicenseUrl').value = widevineLicenseUrl;
+            document.getElementById('clearKeyUrl').value = clearKeyUrl;
+
+            if (link) {
+                playVideo(null, link, clearKeyPair, widevineLicenseUrl);
+            }
+        }
+
+        async function playVideo(event, paramLink, paramKeyPair, paramLicenseUrl) {
+            if (event) event.preventDefault();
+
+            var link = paramLink || document.getElementById('link').value;
+            var clearKeyPair = paramKeyPair || document.getElementById('clearKeyPair').value;
+            var widevineLicenseUrl = paramLicenseUrl || document.getElementById('widevineLicenseUrl').value;
+
+            if (!link) {
+                alert("Please provide a valid MPD or HLS link.");
+                return;
+            }
+
+            let clearKeyKid = null, clearKey = null;
+
+            if (clearKeyPair) {
+                const keyPairSplit = clearKeyPair.split(':');
+                if (keyPairSplit.length === 2) {
+                    clearKeyKid = keyPairSplit[0];
+                    clearKey = keyPairSplit[1];
+                } else {
+                    alert("Invalid Clear Key format. Use keyId:key");
+                    return;
+                }
+            }
+
+            setupPlayer(link, clearKeyKid, clearKey, widevineLicenseUrl);
+        }
+
+        function setupPlayer(link, clearKeyKid, clearKey, widevineLicenseUrl) {
+            var playerInstance = jwplayer("player");
+            var source = {
+                "file": link,
+                "default": false
+            };
+
+            if (link.includes('.mpd')) {
+                source.type = "dash";
+                if (clearKeyKid && clearKey) {
+                    source.drm = { "clearkey": { "keyId": clearKeyKid, "key": clearKey } };
+                }
+                if (widevineLicenseUrl) {
+                    source.drm = source.drm || {};
+                    source.drm.widevine = { "url": widevineLicenseUrl };
+                }
+            } else if (link.includes('.m3u8')) {
+                source.type = "hls";
+            } else {
+                alert("Unsupported link format.");
+                return;
+            }
+
+            playerInstance.setup({
+                playlist: [{ "sources": [source] }],
+                width: "100%",
+                aspectratio: "16:9",
+                autostart: true
+            });
+        }
+
+        window.onload = populateForm;
+    </script>
 </body>
+
 </html>
